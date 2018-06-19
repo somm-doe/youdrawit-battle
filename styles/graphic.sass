@@ -1,0 +1,205 @@
+@mixin fulllayer
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+.you-draw-it
+  margin: 30px 0 20px 0
+  position: relative
+  overflow: hidden
+
+  #gradient-black
+    .start
+      stop-color: $lightestgrey
+      stop-opacity: $gradient-opacity
+    .end
+      stop-color: $lightestgrey
+      stop-opacity: 0
+
+  #gradient-red
+    .start
+      stop-color: $lightestgrey
+      stop-opacity: $gradient-opacity
+    .end
+      stop-color: $lightestgrey
+      stop-opacity: 0
+
+  .axis
+    opacity: .5
+
+    text
+      font-size: 13px
+
+  .inactive_text
+    text-anchor: left
+    fill: $lightgrey
+    font-size: 24px
+
+  .line
+    fill: none
+    stroke-width: 3
+
+    &.black
+      stroke: $black
+
+    &.red
+      stroke: $red
+
+  .inactive_line
+    fill: none
+    stroke-width: 3
+
+    &.black
+      stroke: $lightergrey
+
+    &.red
+      stroke: $lightergrey
+
+  .dots
+    circle
+      transition: opacity 0.3s
+
+      &.median
+        cursor: pointer
+
+      &.black
+        fill: $black
+
+      &.red
+        fill: $red
+
+  .labels
+    @include fulllayer
+    pointer-events: none
+
+    .data-label
+      position: absolute
+      transition: opacity 0.3s
+      z-index: 2
+
+      span
+        position: relative
+        margin-top: -43px
+        left: -50%
+        padding: 5px 15px
+        color: white
+        display: block
+        text-align: center
+        line-height: 16px
+        white-space: nowrap
+        font-weight: bold
+
+      &.edge-left span
+        left: -10px
+
+      &.edge-right span
+        left: auto
+        right: 86%
+
+      &:after
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+        border-color: rgba(136, 183, 213, 0)
+        border-width: 12px 6px
+        margin-left: -6px
+
+      &.black
+        span
+          background-color: $black
+        &:after
+          border-top-color: $black
+
+      &.red
+        span
+          background-color: $red
+        &:after
+          border-top-color: $red
+
+      &.your-result
+        position: absolute
+        z-index: 1
+
+        span
+          background-color: $schwaebische-red
+        &:after
+          border-top-color: $schwaebische-red
+
+  .titles
+    @include fulllayer
+    pointer-events: none
+    padding-top: 20px
+
+    span
+      display: block
+      position: absolute
+      text-align: center
+      text-transform: none
+      white-space: pre-line
+      line-height: 1.5
+      font-size: 80%
+
+  .yachse
+    font-size: 13px
+
+  .controls
+    @include fulllayer
+    pointer-events: none
+    text-align: center
+    color: $schwaebische-red
+
+    .box
+      margin-top: 230px
+      display: inline-block
+      border: 2px solid $schwaebische-red
+      font-size: 70%
+      padding: 10px 6px 10px 6px
+      font-family: Merriweather, Georgia, serif
+      background-color: white !important
+      font-weight: 400
+
+  .grid
+    .domain
+      stroke-width: 0
+
+    .tick line
+      stroke-dasharray: 1,1
+      opacity: 0.2
+
+      &.highlight
+        opacity: 0.7
+
+  .draggable
+    cursor: pointer
+
+  .your-line, .preview-line
+    stroke-width: 4
+    stroke-dasharray: 1 7
+    stroke-linecap: round
+    fill: none
+
+  .your-line
+    stroke: $schwaebische-red
+
+  .preview-line
+    opacity: 0
+    stroke: #aaaaaa
+
+  &:hover .preview-line
+    opacity: 1
+
+.drawn
+  .controls
+    display: none
+
+  &:hover .preview-line
+    opacity: 0
+
+#preview-arrow
+  path
+    fill: #aaaaaa

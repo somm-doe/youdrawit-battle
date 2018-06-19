@@ -1,0 +1,183 @@
+footer
+  display: block
+  box-sizing: border-box
+  &:after, &:before
+    box-sizing: border-box
+  \::selection
+    background: #25282a
+    color: #fff
+  a
+    cursor: pointer
+    color: #690d23
+    text-decoration: none
+    font-family: Ubuntu, Helvetica, Arial, sans-serif
+    font-weight: 700
+    &:hover, &:focus
+      cursor: pointer
+      color: #690d23
+      text-decoration: none
+  .clearfix
+    &:after
+      clear: both
+      display: table
+      content: " "
+    &:before
+      display: table
+      content: " "
+  .icon-twitter-squared
+    display: inline-block
+    width: 28px
+    height: 28px
+    background: url(../images/twitter.png) left center no-repeat
+    background-size: 28px
+  .icon-facebook-squared
+    display: inline-block
+    width: 28px
+    height: 28px
+    background: url(../images/facebook.png) left center no-repeat
+    background-size: 28px
+  .subscribers-emblem
+    display: inline-block
+    width: 12px
+    height: 14px
+    background: url(../images/subscriber.png) left center no-repeat
+
+a
+  background-color: transparent
+  font-family: Ubuntu, Helvetica, Arial, sans-serif
+  font-weight: 700
+  -webkit-text-decoration-skip: objects
+  &:active, &:hover
+    outline-width: 0
+  &:active
+    outline: auto !important
+
+img
+  border-style: none
+
+@media screen
+  #footer
+    margin: 0 16px
+    padding: 48px 16px 0
+    font-weight: 700
+    background-color: #fff
+    [class^="col-"]
+      margin-bottom: 48px
+    .copyright
+      font-size: 0.875rem
+      .logo
+        display: block
+        margin-bottom: 12px
+    .grid .row
+      margin: 0
+    .link-list
+      list-style: none
+      margin: 0
+      padding: 0
+      font-size: 0.875rem
+      li
+        display: block
+        a
+          color: #25282a
+          font-family: Ubuntu, Helvetica, Arial, sans-serif
+          font-weight: 700
+          &:hover, &:focus
+            color: #25282a
+        &:not(:last-of-type)
+          margin-bottom: 16px
+    .social-media
+      font-size: 1.75rem
+      margin-bottom: 24px
+      a
+        color: #25282a
+          color: #25282a
+          font-family: Ubuntu, Helvetica, Arial, sans-serif
+          font-weight: 700
+        &:hover, &:focus
+          color: #25282a
+        &:not(:last-of-type), &:hover:not(:last-of-type), &:focus:not(:last-of-type)
+          margin-right: 12px
+    .title
+      text-transform: uppercase
+      font-size: 1.375rem
+      margin: 0 0 24px
+      padding: 0
+      .subscribers-emblem
+        margin-left: 12px
+  .grid
+    position: relative
+    max-width: 940px
+    margin: 0 auto
+    .row
+      position: relative
+      &:not(.swiper-wrapper)
+        display: flex
+        flex-wrap: wrap
+      [class^="col-"]
+        width: 100%
+        min-height: 1px
+        margin-bottom: 16px
+        padding: 0 8px
+      .col-100
+        padding-left: 8px !important
+        padding-right: 8px !important
+  .visible-tablet
+    display: none
+
+@media screen and (max-width: 991px)
+  #footer .copyright
+    margin-bottom: 16px
+
+@media screen and (min-width: 768px)
+  #footer .link-list.horizontal li
+    display: inline-block
+    margin-bottom: 0
+    &:not(:last-of-type)
+      margin-right: 24px
+
+@media screen and (min-width: 992px)
+  #footer .social-media
+    margin-bottom: 64px
+
+@media screen and (min-width: 768px)
+  .grid .row
+    margin-bottom: 16px
+
+@media screen and (min-width: 768px)
+  .grid .row [class^="col-"]
+    margin-bottom: 0
+
+@media screen and (min-width: 768px)
+  .grid .row .col-t-50
+    width: 50%
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+  .grid .row .col-t-100
+    width: 100%
+    margin-bottom: 16px
+
+@media screen and (min-width: 992px)
+  .grid .row .col-d-33
+    width: 33%
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+  .visible-tablet
+    display: block
+
+@media print
+  footer#footer
+    > div:first-child > div
+      display: none
+      &:first-child
+        display: block
+        > div
+          display: none
+          &:first-child
+            display: block
+            .title, .social-media
+              display: none
+    .copyright
+      font-size: 0.875rem
+      font-weight: bold
+      > img
+        display: block

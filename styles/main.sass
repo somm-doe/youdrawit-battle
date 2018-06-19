@@ -1,0 +1,339 @@
+*
+  box-sizing: border-box
+
+@import "../bower_components/normalize-css/normalize.css"
+@import "fonts.css"
+@import "variables"
+@import "icons"
+@import "globals"
+@import "header"
+@import "footer"
+@import "graphic"
+
+.not_initial_screen
+  display: none
+body
+  background: none
+
+#newbody
+  padding: 0
+  margin: 0
+
+@media only screen and (max-device-width: 981px) and (orientation:portrait)
+    #newbody
+    min-width: 100%
+    max-width: 100%
+
+@media only screen and (max-device-width: 981px) and (orientation:landscape)
+    #newbody
+    min-width: 100%
+    max-width: 100%
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    #newbody
+      min-width: 100%
+      max-width: 320px
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    #newbody
+      min-width: 100%
+      max-width: 480px
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    #newbody
+      min-width: 100%
+      max-width: 320px
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    #newbody
+      min-width: 100%
+      max-width: 568px
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)
+    #newbody
+      min-width: 100%
+      max-width: 375px
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)
+    #newbody
+      min-width: 100%
+      max-width: 667px
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait)
+    #newbody
+      min-width: 100%
+      max-width: 414px
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape)
+    #newbody
+      min-width: 100%
+      max-width: 736px
+
+#content
+  overflow: hidden
+
+  &.container
+    padding: 10px 30px 20px 30px
+    margin: 0 auto
+    background: white
+
+.category
+  overflow: hidden
+
+  a
+    display: block
+    text-decoration: none
+    padding: 10px 0
+    margin: 30px 0 20px 0
+    color: white
+    font-weight: bold
+    font-size: 20px
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+
+    &:hover
+      text-decoration: none
+
+.intro
+  max-width: $max-width * 0.9
+  text-align: center
+  margin: 0 auto 20px auto
+
+  h1
+    font-size: 210%
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+
+  p
+    line-height: 1.6
+    font-family: Merriweather Light, Georgia, serif
+    font-weight: 300
+
+  p b, strong
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+
+  .introtext
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+    font-size: 130%
+
+  .active_city_label
+    text-transform: capitalize
+
+  .inactive_city_label
+    text-transform: capitalize
+
+.questions
+  margin-top: 60px
+
+.question
+  h2, h3
+    max-width: $max-width * 0.8
+    margin: 10px auto
+    text-align: center
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+
+  h2
+    font-size: 100%
+    color: #999
+    text-transform: uppercase
+    font-style: normal
+
+  h3
+    font-size: 140%
+
+  .active_city_label
+    text-transform: uppercase
+
+  .inactive_city_label
+    text-transform: uppercase
+
+  .accessibility
+    margin: 20px 0 10px 0
+    text-align: right
+
+  .result
+    position: relative
+    margin-top: 50px
+    margin-bottom: 70px
+
+    .actionContainer
+      font-size: 18px
+      font-family: Ubuntu, Helvetica, Arial, sans-serif
+      position: absolute
+      left: 0
+      right: 0
+
+      button
+        font-family: Ubuntu, Helvetica, Arial, sans-serif
+        text-transform: none
+        display: block
+        margin: 20px auto
+        padding: 10px 16px
+        background: $schwaebische-red
+        color: white
+        cursor: pointer
+        outline: none
+        border: 1px solid #690d23
+        border-radius: 2px
+        line-height: 1
+
+        &[disabled]
+          color: #ffffff
+          background-color: #d9d9d6
+          cursor: not-allowed
+          border: 1px solid #d9d9d6
+
+      .tooltipcontainer
+        display: none
+        left: 50%
+        position: absolute
+        opacity: 0
+        padding-top: 7px
+
+        .tooltiptext
+          position: relative
+          background-color: #d9d9d6
+          color: #000
+          text-align: center
+          border-radius: 6px
+          padding: 8px 12px
+          z-index: 1
+          left: -50%
+          transition: opacity 1s
+          white-space: nowrap
+
+    .text
+      max-width: $max-width * 0.8
+      margin: 10px auto
+      visibility: hidden
+      text-align: center
+      font-size: 17px
+
+      p
+        line-height: 1.5
+        font-family: Merriweather Light, Georgia, serif
+        font-weight: 300
+
+      p b, strong
+        font-family: Merriweather Bold, Georgia, serif
+        font-weight: 700
+
+      a
+        display: block
+        text-align: center
+        padding: 0.3em 0
+        border-bottom: 2px dotted #dadada
+        position: relative
+        left: 0
+        right: 0
+        font-family: Merriweather Bold, Georgia, serif
+        font-weight: 700
+
+        &:first-of-type
+          border-top: 2px dotted #dadada
+          margin-top: 30px
+
+        &:hover
+          text-decoration: none
+
+    &.finished
+      .tooltipcontainer
+        display: block
+
+    &.shown
+      .actionContainer
+        display: none
+
+      .text
+        visibility: visible
+
+  .tooltiptext::after
+    	bottom: 100%
+    	left: 50%
+    	border: solid transparent
+    	content: " "
+    	height: 0
+    	width: 0
+    	position: absolute
+    	pointer-events: none
+    	border-color: rgba(136, 183, 213, 0)
+    	border-bottom-color: #d9d9d6
+    	border-width: 15px
+    	margin-left: -15px
+
+  .showAction:hover + .tooltipcontainer
+      opacity: 1
+
+.score
+  display: block
+  text-align: center
+  padding: 0.3em 0
+  border-bottom: 2px dotted #dadada
+  position: relative
+  left: 0
+  right: 0
+  font-family: Merriweather Bold, Georgia, serif
+  border-top: 2px dotted #dadada
+  margin-top: 30px
+  color: #690d23
+  font-weight: 700
+
+.score_final
+  color: #690d23
+  
+.city_button
+  font-family: Ubuntu, Helvetica, Arial, sans-serif
+  text-transform: none
+  margin: 20px 10px
+  padding: 10px 16px
+  background: #690d23
+  color: #fff
+  cursor: pointer
+  outline: 0
+  border: 1px solid #690d23
+  border-radius: 2px
+  line-height: 1
+
+.credits
+  h3, h4
+    font-family: Merriweather Bold, Georgia, serif
+    margin: 30px 0 10px 0
+    font-weight: 300
+
+  p
+    margin: 0 0 5px 0
+    font-family: Merriweather Light, Georgia, serif
+    font-weight: 300
+  p b, strong
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+  a
+    display: inline
+    font-family: Merriweather Bold, Georgia, serif
+    font-weight: 700
+
+  p + a
+    margin-bottom: 20px
+
+.final_score_hr
+  margin-top: 30px
+
+.updatedAt
+  margin-top: 20px
+  text-align: right
+  color: #888b8d
+
+@media (max-width: $bp-md)
+  .container
+    padding-left: 10px
+    padding-right: 10px
+
+@media (max-width: $bp-sm)
+  .you-draw-it
+    margin: 0 -30px
+
+  .question .result.finished .tooltipcontainer
+    display: none

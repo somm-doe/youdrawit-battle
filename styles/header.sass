@@ -1,0 +1,234 @@
+#header
+  background: white
+  overflow: hidden
+  padding-top: 15px
+  margin-bottom: 25px
+  color: white
+  font-family: Merriweather, serif
+  font-weight: 400
+  box-shadow: 0 3px 3px 0 rgba(136,139,141,0.15)
+
+  .container
+    margin: auto
+    width: 50%
+
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+  *::placeholder
+    font-family: Merriweather, serif
+    font-weight: 400
+
+  .logo
+    margin-bottom: 20px
+
+  .logo-img
+    width: 180px
+    height: 39px
+    display: block 
+    margin-left: auto 
+    margin-right: auto 
+
+  .servicenavi
+    display: inline-block
+
+    li
+      display: inline-block
+      border-radius: 2px
+
+      &:hover
+        background: white
+        color: $schwaebische-red
+
+        .icon:before
+          color: $schwaebische-red
+
+      a
+        padding: 5px
+        color: inherit
+        text-decoration: none
+        margin-right: 10px
+        display: inline-block
+
+  .searchBox
+    display: inline-block
+    margin-left: 20px
+
+    form
+      display: inline-block
+      border-radius: 3px
+      background: white
+      color: black
+      padding: 10px
+      font-size: 17px
+
+      input
+        border: none
+        outline: none
+        width: 230px
+
+      button
+        border: none
+        background: none
+        padding: 0
+        cursor: pointer
+
+        &:before
+          color: $schwaebische-red
+          margin-top: -24px
+          margin-left: -30px
+          font-size: 30px
+
+  .mobileButtons
+    display: none
+
+    .mobileButton
+      display: inline-block
+      width: 0
+      overflow: hidden
+      height: 48px
+      cursor: pointer
+      @include icon-size(26px)
+      margin-left: 48px
+
+      &:before
+        margin-top: -2px
+        margin-left: -44px
+        background: white
+        color: $schwaebische-red
+        padding: 8px
+        border-radius: 3px
+        border: 1px solid transparent
+
+  #searchState:checked ~ .mobileButtons
+    .searchToggle:before
+      border: 1px solid white
+      background: transparent
+      color: white
+
+  #naviState:checked ~ .mobileButtons
+    .naviToggle:before
+      border: 1px solid white
+      background: transparent
+      color: white
+
+
+  .naviCont
+    color: white
+    font-size: 20px
+    margin-top: 35px
+
+    a
+      color: inherit
+      text-decoration: none
+      padding: 6px 10px
+      line-height: 1.6
+      display: inline-block
+      border-radius: 3px 3px 0 0
+
+      &:hover, &.active
+        background: white
+        color: $schwaebische-red
+
+    li
+      display: inline-block
+
+    .subnavi
+      display: inline-block
+
+    .masternavi
+      float: right
+      font-weight: 800
+
+@media (max-width: $bp-md)
+  #header
+    padding-top: 15px
+
+    .logo-img
+      width: 124px
+      height: 27px
+
+    .searchBox
+      form
+        input
+          width: 170px
+
+    .naviCont
+      margin-top: 15px
+      font-size: 18px
+
+      .subnavi, .masternavi
+        display: block
+        margin-left: -10px
+        margin-right: -10px
+
+      .subnavi
+        a
+          border-radius: 3px
+
+      .masternavi
+        float: none
+
+@media (max-width: $bp-sm)
+  #header
+    .toolsTop
+      float: none
+
+    .servicenavi
+      display: none
+
+    .searchBox
+      display: none
+
+    .logo-img
+      width: 124px
+      height: 27px
+
+    #searchState:checked ~ .toolsTop .searchBox
+      display: block
+      padding: 10px 0
+      margin-left: 0
+
+      form
+        margin-top: 10px
+        width: 100%
+        display: block
+
+        input
+          width: 100%
+          padding-right: 36px
+          display: block
+
+        button
+          float: right
+
+          &:before
+            margin-top: -28px
+
+    .mobileButtons
+      display: inline-block
+
+    .naviCont
+      display: none
+
+      .subnavi
+        li
+          border-bottom: 1px solid white
+
+          a
+            border-radius: 0
+
+      ul
+        li
+          display: block
+
+          a
+            border-radius: 0
+            display: block
+            padding-left: 15px
+            padding-right: 15px
+
+    #naviState:checked ~ .naviCont
+      display: block
