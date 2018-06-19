@@ -1,0 +1,24 @@
+{
+  "name": "you-draw-it-battle",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+	"Simon Haas <post@simonhaas.de>",
+	"Bryony Miles <bryony@bmdata.co.uk>",
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.5.0",
+    "normalize-css": "^5.0.0",
+    "jquery": "^3.2.1"
+  }
+}
