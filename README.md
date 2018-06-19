@@ -1,6 +1,6 @@
 # You Draw It - Battle Edition
 
-## About:
+## About
 "You Draw It - Battle Edition" generates interactive charts that let users draw their guesses on how data changed over time, compare it to the actual data and the data of a rival city, sports club etc. You can see [a live demo here](https://youdrawit.schwaebische.de/fn-lindau/tippspiel/).
 
 ## Credits
@@ -31,7 +31,8 @@ Copyright (c) 2018 Schwäbische Zeitung
 - Replace mayor names in `app.js` or leave blank. Years define the term length and the start of user guesses.
 - Replace city names in `app.js`
 - Replace city names in `index.html` and adjust HTML
-- Change CSS/Sass in `styles/` and HTML in `partials/`
+- Change CSS/Sass in `styles/`
+- Adjust header, footer and web analytics in `partials/`
 - Replace images in `/images`
 - Download [fonts](https://fonts.google.com/)
 - Adjust font URL in `Gulpfile.js` (dlFonts)
