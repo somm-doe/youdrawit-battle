@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de" prefix="og: http://ogp.me/ns#">
+<head>
+    <title>Duell der Gemeinden: Lindau gegen Friedrichshafen</title>
+    <meta property="og:title" content="Duell der Gemeinden: Lindau gegen Friedrichshafen" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0"/>
+    <meta name="Keywords" content="Duell, Gemeinden, Städte, Battle, Schwäbische Zeitung, Schwäbische, Datenprojekt, Daten, Statistik"/>
+    <meta name="Description" content="Was tippen Sie, welche Stadt liegt im Duell der Gemeinden vorn? Zeichnen Sie Ihre Einschätzung in die Grafik ein."/>
+    <meta name="Author" content="Simon Haas"/>
+    <meta name="DC.Rights" content="schwäbische.de"/>
+    <meta name="Publisher" content="schwäbische.de" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@schwaebische">
+    <meta name="twitter:creator" content="@simondhaas">
+    <meta name="twitter:description" content="Was tippen Sie, welche Stadt liegt im Duell der Gemeinden vorn? Zeichnen Sie Ihre Einschätzung in die Grafik ein.">
+    <meta name="twitter:image" content="https://youdrawit.schwaebische.de/fn-lindau/tippspiel/images/duell_friedrichshafen_lindau.jpg">
+    <meta property="og:image" content="https://youdrawit.schwaebische.de/fn-lindau/tippspiel/images/duell_friedrichshafen_lindau.jpg" />
+    <meta name="robots" content="index,follow,noarchive"/>
+    <link href="../favicon.ico" rel="shortcut icon" type=image/x-icon>
+    <link href="../favicon.ico" rel="icon" type=image/x-icon>
+	<base target="_blank">
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+</head>
+<body>
+{% include "partials/header.html"  %}
+<div id="newbody">
+<article id="content" class="container">
+    <div class="intro">
+        <p class="select_active_city introtext">Für welche Stadt möchten Sie Ihre Tipps abgeben?</p>
+          <button class="select_active_city city_button" type="button" id="lindau">Lindau</button><button class="select_active_city city_button" type="button" id="friedrichshafen">Friedrichshafen</button></span>
+    </div>
+    <div class="intro not_initial_screen">
+        <h1>Wie hat sich <span class="active_city_label"></span> im Vergleich zu <span class="inactive_city_label"></span> verändert?</h1>
+        <p>Lindau gegen Friedrichshafen - welcher Ort am Bodensee schneidet im Duell der Gemeinden besser ab? Hier können Sie tippen, wie sich <span class="active_city_label"></span> in den vergangenen Jahren unter dem jeweiligen Bürgermeister entwickelt hat. Anschließend können Sie Ihre Einschätzung mit den tatsächlichen Werten und jenen von <span class="inactive_city_label"></span> vergleichen.</p>
+        <p><b>Dafür müssen Sie einfach die Linie der Grafik mit Maus oder Touchscreen weiterziehen.</b> Sie können diese später noch anpassen. Danach verrät ein Klick auf den nun roten Button, ob Sie richtig lagen. Dargestellt werden übrigens keine absoluten Zahlen, sondern meist Berechnungen <b>pro 1000 Einwohner</b>, um die Kommunen besser miteinander vergleichen zu können. </p>
+    </div>
+
+    <div class="questions not_initial_screen">
+        {% for question in data %}
+        <div class="question">
+            <h2> <span class="active_city_label"></span> - {{ question.heading|mdi }}</h2>
+            <h3>{{ question.subheading|mdi }}</h3>
+            <div class="you-draw-it {{ question.key }}" data-key="{{ question.key }}"></div>
+            <div class="result {{ question.key }}">
+                <div class="actionContainer">
+                    <button class="showAction" disabled>Wie war's tatsächlich?</button>
+                    <div class="tooltipcontainer">
+                        <span class="tooltiptext">Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt.</span>
+                    </div>
+                </div>
+                    <div class="text">{{ question.result|md }}</div>
+                    <div class="text score"><span id="score_label{{ question.key }}"></span></div>
+                </div>
+            <script>
+                window.ydi_data = window.ydi_data || {};
+                window.ydi_data['{{ question.key }}'] = {% autoescape false %}{{ question|json_encode }}{% endautoescape %};
+            </script>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr class="not_initial_screen">
+
+    <div class="credits not_initial_screen">
+        <p id="final_score"></p>
+        <h3>Redaktion:</h3>
+
+        <p><a href="https://www.schwaebische.de/autor_name,Simon+Haas.html">Simon Haas</a> (Recherche, Design, Programmierung)</p>
+        <p>Bryony Miles (Programmierung)</p>
+		
+        <h3>Quellen:</h3>
+
+        <p><a href="https://www.statistik-bw.de/">Statistisches Landesamt Baden-Württemberg</a>, <a href="https://www.statistik.bayern.de/statistik/">Statistisches Landesamt Bayern</a>, <a href="http://www.bak.de/">Bayerische Landesapothekerkammer</a>, <a href="http://www.bmvi.de/DE/Service/Publikationen/publikationen.html">Bundesministerium für Verkehr und digitale Infrastruktur</a>, <a href="https://ppkonstanz.polizei-bw.de/">Kriminalstatistik PP Konstanz</a>, <a href="http://www.polizei.bayern.de/schwaben_sw/">Kriminalstatistik PP Schwaben Süd/West</a>, <a href="https://www.kba.de/DE/Statistik/statistik_node.html">Kraftfahrt-Bundesamt</a>, <a href="https://statistik.arbeitsagentur.de/">Bundesagentur für Arbeit</a></p>
+
+        <h3>Credits:</h3>
+
+        <p>Die Grundlage für das <a href="https://github.com/somm-doe/youdrawit-battle">Duell der Gemeinden</a> stammt vom Westdeutschen Rundfunk, der <a href="https://github.com/wdr-data/you-draw-it">den Code auf GitHub öffentlich zugänglich</a> gemacht hat.</p>
+    </div>
+
+    <div class="updatedAt not_initial_screen">
+        {% set now = Date() %}
+        Stand: {{ now|date('d.m.Y') }}
+    </div>
+</article>
+{% include "partials/footer.html" %}
+</div>
+<script src="bower_components/d3/d3.min.js"></script>
+<!-- build:js app.js -->
+<script src="app.js"></script>
+<!-- endbuild -->
+
+{% include "partials/webtrekk.html" %}
+
+</body>
+</html>
