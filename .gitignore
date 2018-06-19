@@ -1,0 +1,13 @@
+node_modules/
+bower_components/
+
+data_raw/
+.tmp/
+build/
+
+*.zip
+
+/fonts/
+
+# config
+.env
