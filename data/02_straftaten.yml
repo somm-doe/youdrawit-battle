@@ -1,0 +1,30 @@
+heading: Kriminalität
+subheading: Wie hat sich die Zahl der Straftaten verändert?
+winner: "friedrichshafen"
+result: >
+        **Punkt für Friedrichshafen**: In der Stadt registrierte die Polizei pro 1000 Einwohner zuletzt weniger Straftaten als in der Grenzregion Lindau. (Die Zahlen wurden bereinigt, sie enthalten also keine Verstöße, die nur Ausländer begehen können.)
+
+lindau:
+  2009: 90.029
+  2010: 78.879
+  2011: 85.589
+  2012: 79.210
+  2013: 78.909
+  2014: 69.644
+  2015: 77.551
+  2016: 94.855
+  2017: 91.687
+
+friedrichshafen:
+  2009: 73.294
+  2010: 70.100
+  2011: 73.803
+  2012: 61.703
+  2013: 62.656
+  2014: 62.810
+  2015: 66.823
+  2016: 64.983
+  2017: 64.271
+
+unit: ''
+precision: 1

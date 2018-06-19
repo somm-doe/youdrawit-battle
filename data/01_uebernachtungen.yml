@@ -1,0 +1,30 @@
+heading: Tourismus
+subheading: Wie hat sich die Zahl der Übernachtungen verändert?
+winner: "lindau"
+result: >
+        Gegen die Inselaltstadt mit Nobelpreisträger-Tagung ist die Messestadt chancenlos: **Lindau zieht pro 1000 Einwohner weit mehr Touristen und Geschäftsleute an** - und bekommt einen Punkt.
+
+lindau:
+  2009: 24661
+  2010: 23501
+  2011: 26012
+  2012: 27805
+  2013: 27223
+  2014: 28304
+  2015: 29204
+  2016: 29843
+  2017: 32527
+
+friedrichshafen:
+  2009: 9782
+  2010: 9843
+  2011: 10039
+  2012: 10515
+  2013: 10209
+  2014: 11216
+  2015: 11960
+  2016: 12405
+  2017: 12647
+
+unit: ''
+precision: none

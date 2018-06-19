@@ -1,0 +1,30 @@
+heading: Gesundheit
+subheading: Wie viele Einwohner kommen auf eine Apotheke?
+winner: "friedrichshafen"
+result: >
+        **In Friedrichshafen gibt es bezogen auf die Anzahl der Bewohner mehr als drei Mal so viele Apotheken** - plus einen Punkt.
+
+lindau:
+  2009: 9843
+  2010: 9748
+  2011: 10039
+  2012: 10515
+  2013: 10209
+  2014: 11216
+  2015: 11960
+  2016: 12405
+  2017: 12647
+
+friedrichshafen:
+  2009: 2467
+  2010: 2468
+  2011: 2477
+  2012: 2717
+  2013: 3057
+  2014: 3070
+  2015: 3093
+  2016: 3142
+  2017: 3607
+
+unit: ''
+precision: none

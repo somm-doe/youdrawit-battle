@@ -1,0 +1,30 @@
+heading: Finanzen
+subheading: Wie hat sich die Steuerkraft pro Einwohner entwickelt?
+winner: "friedrichshafen"
+result: >
+        Lindau holt zwar auf, der **Punkt geht aber an Friedrichshafen**. (Die sogenannte Steuerkraftmesszahl setzt sich aus der Grundsteuer A und B sowie der Gewerbesteuer zusammen.)
+
+lindau:
+  2008: 723
+  2009: 694
+  2010: 757
+  2011: 746
+  2012: 726
+  2013: 745
+  2014: 892
+  2015: 809
+  2016: 996
+
+friedrichshafen:
+  2008: 1035
+  2009: 1120
+  2010: 1520
+  2011: 778
+  2012: 1022
+  2013: 1084
+  2014: 1116
+  2015: 1130
+  2016: 1292
+
+unit: '€'
+precision: 1

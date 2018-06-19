@@ -1,0 +1,28 @@
+heading: Verkehr
+subheading: Wie hat sich die Zahl der Unfälle verändert?
+winner: "lindau"
+result: >
+       **Im Stadtgebiet von Lindau registrierte die Polizei zuletzt weniger Verkehrsunfälle.** Die Zahlen zeigen, wie häufig es pro 1000 Einwohner innerorts gekracht hat.
+
+lindau:
+  2009: 5.23
+  2010: 5.13
+  2011: 5.23
+  2012: 4.58
+  2013: 5.70
+  2014: 5.46
+  2015: 5.33
+  2016: 4.91
+
+friedrichshafen:
+  2009: 5.14
+  2010: 5.00
+  2011: 5.20
+  2012: 5.51
+  2013: 5.28
+  2014: 5.60
+  2015: 5.30
+  2016: 5.09
+
+unit: ''
+precision: 1

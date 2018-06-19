@@ -1,0 +1,28 @@
+heading: Freizeit
+subheading: Wie hat sich der Anteil der Erholungsflächen entwickelt?
+winner: "lindau"
+result: >
+        **Punktgewinn für Lindau**: Bezogen auf die Siedlungs- und Verkehrsfläche gibt es dort mehr unbebaute Fläche und Grünanlagen wie Parks, Schrebergärten, Sportflächen und Campingplätze.
+
+lindau:
+  2009: 11.37
+  2010: 11.35
+  2011: 12.63
+  2012: 12.36
+  2013: 12.53
+  2014: 12.50
+  2015: 12.45
+  2016: 12.42
+
+friedrichshafen:
+  2009: 7.58
+  2010: 7.59
+  2011: 7.58
+  2012: 7.55
+  2013: 7.63
+  2014: 7.70
+  2015: 7.72
+  2016: 7.71
+
+unit: '%'
+precision: 1

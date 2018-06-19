@@ -1,0 +1,28 @@
+heading: Digitalisierung
+subheading: In wie viel Prozent der Haushalte gibt es schnelles Internet?
+winner: "friedrichshafen"
+result: >
+        Auch wenn Lindau aufgeholt hat: **Friedrichshafen hat das schnellere Internet. ** Die Daten zeigen, in wie viel Prozent der Haushalte Internet-Leitungen mit einer Leistung von 50 Mbit/s und mehr verfügbar sind. (In den Jahren 2008 und 2009 wurden vom TÜV keine Daten erhoben, deshalb sind erst ab 2010 belastbare Zahlen verfügbar.)
+
+lindau:
+  2010: 0.21
+  2011: 0.24
+  2012: 0.20
+  2013: 13.00
+  2014: 62.70
+  2015: 62.71
+  2016: 75.30
+  2017: 75.31
+
+friedrichshafen:
+  2010: 90.10
+  2011: 90.11
+  2012: 90.12
+  2013: 90.13
+  2014: 90.14
+  2015: 90.13
+  2016: 90.12
+  2017: 91.90
+
+unit: '%'
+precision: 1
