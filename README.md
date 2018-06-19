@@ -1,4 +1,7 @@
-# You Draw It - Battle Edition
+<p align="center">
+  <img alt="You Draw It - Battle Edition" width="400px" src="http://youdrawit.schwaebische.de/github_logo.png" />
+</p>
+<h2 align="center">Guess, draw and compare data</h2>
 
 ## About
 "You Draw It - Battle Edition" generates interactive charts that let users draw their guesses on how data changed over time, compare it to the actual data and the data of a rival city, sports club etc. You can see [a live demo here](https://youdrawit.schwaebische.de/fn-lindau/tippspiel/).
