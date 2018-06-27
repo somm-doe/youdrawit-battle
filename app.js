@@ -380,6 +380,8 @@
             const resultSection = d3.select('.result.' + key);
 
             const drawUserLine = function() {
+                // error logging for firefox
+                console.log(state[key].yourData);
                 userSel.attr('d', userLine.defined(ƒ('defined'))(state[key].yourData));
 
                 const d = state[key].yourData[state[key].yourData.length-1];
