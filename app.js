@@ -9,20 +9,7 @@
     var inactive_score = 0;
     var scored = d3.set();
 
-    const get_period = function(maxYear) {
-      if (active_city == city_1){
-        return  [{year: 2014, class: 'black', title: "OB Andreas\nBrand (parteilos)"},
-          {year: Math.min(2018, maxYear), class: 'black', title: "OB Andreas\nBrand (parteilos)"}];
-      } else {
-        return   [{year: 2012, class: 'black', title: "OB Petra\nSeidl (parteilos)"},
-          {year: 2014, class: 'black', title: "OB Gerhard\nEcker (SPD)"},
-          {year: Math.min(2018, maxYear), class: 'black', title: "OB Gerhard\nEcker (SPD)"}];
-      };
-    };
-
-    const setCity = function (){
-      //set choose active city button functionality
-      d3.selectAll("button.select_active_city")
+     d3.selectAll("button.select_active_city")
         .on("click",function(d){
           if(this.id == city_1){
             active_city = city_1;
@@ -37,7 +24,19 @@
           //draw graphs
           drawGraphs();
         });
+        
+    const get_period = function(maxYear) {
+      if (active_city == city_1){
+        return  [{year: 2014, class: 'black', title: "OB Andreas\nBrand (parteilos)"},
+          {year: Math.min(2018, maxYear), class: 'black', title: "OB Andreas\nBrand (parteilos)"}];
+      } else {
+        return   [{year: 2012, class: 'black', title: "OB Petra\nSeidl (parteilos)"},
+          {year: 2014, class: 'black', title: "OB Gerhard\nEcker (SPD)"},
+          {year: Math.min(2018, maxYear), class: 'black', title: "OB Gerhard\nEcker (SPD)"}];
+      };
     };
+
+
 
     const drawGraphs = function () {
         d3.selectAll('.you-draw-it').each(function () {
@@ -301,7 +300,6 @@
                 .attr('y1', c.y(indexedData[medianYear]))
                 .attr('x2', c.x(medianYear) + 50)
                 .attr('y2', c.y(indexedData[medianYear]));
-
             const userSel = c.svg.append('path').attr('class', 'your-line');
             c.dots = c.svg.append('g').attr('class', 'dots');
 
@@ -380,7 +378,6 @@
             const resultSection = d3.select('.result.' + key);
 
             const drawUserLine = function() {
-                // error logging for firefox
                 console.log(state[key].yourData);
                 userSel.attr('d', userLine.defined(ƒ('defined'))(state[key].yourData));
 
